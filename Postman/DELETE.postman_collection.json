@@ -1,0 +1,79 @@
+{
+	"info": {
+		"_postman_id": "658bf97e-d0ae-4204-8724-5b0478f9ef70",
+		"name": "DELETE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25077004"
+	},
+	"item": [
+		{
+			"name": "Удалить коллекцию",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/collections/{{id_collection}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"collections",
+						"{{id_collection}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Удалить лайк фото",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/photos/{{id_photo}}/like",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"photos",
+						"{{id_photo}}",
+						"like"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	]
+}

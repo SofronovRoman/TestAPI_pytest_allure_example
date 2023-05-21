@@ -1,0 +1,39 @@
+{
+	"id": "ed9285d3-7e2a-4cbe-806d-820e69ab5449",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://api.unsplash.com/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "token",
+			"value": "IjUHKcZ1lIQJeohLKDSpJ8Gx9Hby3hwCOQQh9r1PNn8",
+			"type": "secret",
+			"enabled": true
+		},
+		{
+			"key": "id_photo",
+			"value": "rG6Cs33BiVE",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "id_collection",
+			"value": "xo_YlhRLALU",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "username",
+			"value": "jasperboer",
+			"type": "default",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2023-05-21T06:20:41.618Z",
+	"_postman_exported_using": "Postman/10.14.4"
+}

@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "345df94b-b28d-4fd7-9a8f-f98c25e566ae",
+		"name": "POST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25077004"
+	},
+	"item": [
+		{
+			"name": "Создать коллекцию",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/collections?title=forest&description=My photos of forests&private=false",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"collections"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "forest"
+						},
+						{
+							"key": "description",
+							"value": "My photos of forests"
+						},
+						{
+							"key": "private",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Добавить фото в коллекцию",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/collections/{{id_collection}}/add?photo_id={{id_photo}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"collections",
+						"{{id_collection}}",
+						"add"
+					],
+					"query": [
+						{
+							"key": "photo_id",
+							"value": "{{id_photo}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Лайк фото",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/photos/{{id_photo}}/like",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"photos",
+						"{{id_photo}}",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://unsplash.com/oauth/token?client_id=4CPM2nKZTUtKrgKUT_1jOWp_hB7AiBnqyNTWMePxvfQ&client_secret=7Got9bssymIbrRTdoj4Wk9u_UxyIgJEuYtLWSgDtIbs&redirect_uri=urn:ietf:wg:oauth:2.0:oob&code=f_5k0s1qfqfjnD9O_1BlyphC1gI6YvYVTqGAT5HZeqw&grant_type=authorization_code",
+					"protocol": "https",
+					"host": [
+						"unsplash",
+						"com"
+					],
+					"path": [
+						"oauth",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "4CPM2nKZTUtKrgKUT_1jOWp_hB7AiBnqyNTWMePxvfQ"
+						},
+						{
+							"key": "client_secret",
+							"value": "7Got9bssymIbrRTdoj4Wk9u_UxyIgJEuYtLWSgDtIbs"
+						},
+						{
+							"key": "redirect_uri",
+							"value": "urn:ietf:wg:oauth:2.0:oob"
+						},
+						{
+							"key": "code",
+							"value": "f_5k0s1qfqfjnD9O_1BlyphC1gI6YvYVTqGAT5HZeqw"
+						},
+						{
+							"key": "grant_type",
+							"value": "authorization_code"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 201\", function () {",
+					"    pm.response.to.have.status(201);",
+					"});"
+				]
+			}
+		}
+	]
+}

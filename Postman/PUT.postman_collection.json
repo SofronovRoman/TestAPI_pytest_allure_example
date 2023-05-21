@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "2e1ce129-e1ab-48f8-bed5-fdd4431ac537",
+		"name": "PUT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25077004"
+	},
+	"item": [
+		{
+			"name": "Обновление профиля текущего пользователя",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/me?username=Mike010101",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"me"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "Mike010101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Обновление коллекции",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/collections/{{id_collection}}?title=Birds&description=My photos of birds&private=false",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"collections",
+						"{{id_collection}}"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Birds"
+						},
+						{
+							"key": "description",
+							"value": "My photos of birds"
+						},
+						{
+							"key": "private",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	]
+}

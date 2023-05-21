@@ -1,0 +1,295 @@
+{
+	"info": {
+		"_postman_id": "ac6c86f1-f3f8-4170-b305-dac481b13e9a",
+		"name": "GET",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25077004"
+	},
+	"item": [
+		{
+			"name": "Получить общедоступный профиль пользователя",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer nWmdZdbd4El4nbH5LnuoS1nfDpp2q_tDGy8j35AqzPw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/{{username}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{username}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить ссылку на портфолио пользователя",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/{{username}}/portfolio",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{username}}",
+						"portfolio"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Список фотографий пользователя",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/{{username}}/photos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{username}}",
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Список понравившихся фотографий пользователя",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/{{username}}/likes",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{username}}",
+						"likes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Перечисление коллекций пользователя",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/{{username}}/collections",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{username}}",
+						"collections"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить статистику пользователя",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/users/{{username}}/statistics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"{{username}}",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Список фотографий",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/photos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"photos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить фото",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/photos/{{id_photo}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"photos",
+						"{{id_photo}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить случайную фотографию",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/photos/random?count=2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"photos",
+						"random"
+					],
+					"query": [
+						{
+							"key": "count",
+							"value": "2"
+						},
+						{
+							"key": "collections",
+							"value": "2",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получить статистику фотографии",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/photos/{{username}}/statistics",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"photos",
+						"{{username}}",
+						"statistics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Отслеживание загрузки фотографий",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/photos/{{username}}/download",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"photos",
+						"{{username}}",
+						"download"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Получение профиля пользователя",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/me",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					"pm.test(\"Status code is 200\", function () {",
+					"    pm.response.to.have.status(200);",
+					"});"
+				]
+			}
+		}
+	]
+}

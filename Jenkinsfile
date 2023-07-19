@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'python -m venv .venv'
         sh '. .venv/bin/activate'
-        sh 'pip install --user -r requirements.txt'
+        sh 'pip install -r requirements.txt'
       }
     }
     stage('test') {

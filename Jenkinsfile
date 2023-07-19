@@ -1,11 +1,9 @@
 pipeline {
-  agent { docker { image 'python:alpine' } }
+  agent { dockerfile { filename 'Dockerfile' } }
   stages {
     stage('build') {
       steps {
-        sh 'python -m venv .venv'
-        sh '. .venv/bin/activate'
-        sh 'pip install -r requirements.txt'
+        sh 'pip install --user -r requirements.txt'
       }
     }
     stage('test') {

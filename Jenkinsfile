@@ -3,9 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh 'virtualenv TestAPI -p python3'
-        sh 'source TestAPI/bin/activate'
-        sh 'pip install -r requirements.txt'
+        sh 'sudo pip install --upgrade pip'
+        sh 'sudo pip install -r requirements.txt'
       }
     }
     stage('test') {

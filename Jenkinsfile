@@ -3,6 +3,8 @@ pipeline {
   stages {
     stage('build') {
       steps {
+        sh 'python -m venv .venv'
+        sh '. .venv/bin/activate'
         sh 'pip install --user -r requirements.txt'
       }
     }

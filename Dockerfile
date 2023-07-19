@@ -1,10 +1,12 @@
-FROM python:alpine
+FROM python:3.10
 
-RUN mkdir /home/jenkins
-RUN groupadd -g 999 jenkins
-RUN useradd -r -u 999 -g jenkins -d /home/jenkins jenkins
-RUN chown jenkins:jenkins /home/jenkins
-USER jenkins
-WORKDIR /home/jenkins
+#some envs
+WORKDIR /app
 
-CMD ["/bin/bash"]
+#copy local files
+COPY . .
+
+#install python dependencies
+RUN pip install -r requirements.txt
+
+CMD ["python", "-m pytest Tests"]

@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh ''
+        sh 'pip install --upgrade pip'
         sh 'pip3 install -r requirements.txt --user'
       }
     }

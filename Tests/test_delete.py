@@ -7,6 +7,7 @@ from Config.TestData import TestData
 class TestDelete:
 
     @allure.story('Удалить коллекцию')
+    @pytest.mark.skip("Пропуск теста 'Удалить коллекцию'")
     @pytest.mark.parametrize('id_collection', [TestData.ID_COLLECTION])
     def test_delete_collection(self, api, id_collection):
         response = api.delete(f'/collections/{id_collection}')

@@ -1,4 +1,4 @@
-FROM python:alpine
+FROM python:3.10
 
 #some envs
 WORKDIR /app
@@ -9,4 +9,4 @@ COPY . .
 #install python dependencies
 RUN pip install -r requirements.txt
 
-CMD ["python", "-m pytest Tests"]
+#CMD ["python", "-m pytest Tests"]

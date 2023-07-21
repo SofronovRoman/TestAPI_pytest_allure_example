@@ -6,7 +6,7 @@ pipeline {
 
     stage('test') {
       steps {
-        sh 'python -m pytest Tests'
+        sh 'pytest --alluredir=allure_report'
       }   
     }
 

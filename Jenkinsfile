@@ -9,7 +9,7 @@ pipeline {
         sh 'pytest --alluredir=allure-report'
       }   
     }
-
+  }
   post {
         always {
            allure([
@@ -27,5 +27,5 @@ pipeline {
 
 
 
-  }
+
 }

@@ -10,7 +10,7 @@ pipeline {
       }   
     }
 
-    post {
+  post {
         always {
            allure([
       	   includeProperties: false,

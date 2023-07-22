@@ -1,11 +1,9 @@
 pipeline {
-  agent { dockerfile { filename 'Dockerfile' } }
+  agent {...}
   stages {
-
-
-
     stage('test') {
-      steps {
+        agent { dockerfile { filename 'Dockerfile' } }
+        steps {
         sh 'pytest --alluredir=allure-report'
       }   
     }

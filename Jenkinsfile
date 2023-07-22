@@ -10,7 +10,7 @@ pipeline {
   }
   post {
         always{
-            unstash '/var/lib/jenkins/workspace/TestAPI_pytest_allure_example/allure_report' //unpack test results
+//             unstash '/var/lib/jenkins/workspace/TestAPI_pytest_allure_example/allure_report' //unpack test results
             script {
                 allure results: [[path: '/var/lib/jenkins/workspace/TestAPI_pytest_allure_example/allure_report']]
             }

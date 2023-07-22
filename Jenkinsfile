@@ -4,7 +4,7 @@ pipeline {
     stage('test') {
         agent { dockerfile { filename 'Dockerfile' } }
         steps {
-        sh 'pytest --alluredir=./allure-results'
+        sh 'pytest --alluredir=allure-results'
       }   
     }
 
@@ -16,7 +16,7 @@ pipeline {
                includeProperties: false,
                jdk: '',
                reportBuildPolicy: 'ALWAYS',
-               results: [[path: './allure-results']]
+               results: [[path: 'allure-results']]
                ])
 
 

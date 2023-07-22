@@ -16,7 +16,7 @@ pipeline {
                includeProperties: false,
                jdk: '',
                reportBuildPolicy: 'ALWAYS',
-               results: [[path: 'allure-report']]
+               results: [[path: '/var/lib/jenkins/workspace/TestAPI_pytest_allure_example/allure-report']]
                ])
 
 

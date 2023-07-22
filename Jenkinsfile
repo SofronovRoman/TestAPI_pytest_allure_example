@@ -10,8 +10,8 @@ pipeline {
       }   
     }
 
-    stage('Reports') {
-        steps {
+    post {
+        always {
            allure([
       	   includeProperties: false,
       	   jdk: '',

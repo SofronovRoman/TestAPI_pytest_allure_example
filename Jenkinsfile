@@ -17,7 +17,7 @@ pipeline {
                jdk: '',
                report: '/var/lib/jenkins/workspace/TestAPI_pytest_allure_example/allure-report',
                reportBuildPolicy: 'ALWAYS',
-               results: [[path: '/var/lib/jenkins/workspace/TestAPI_pytest_allure_example/allure_report']]
+               results: [[path: '/var/lib/jenkins/tools/ru.yandex.qatools.allure.jenkins.tools.AllureCommandlineInstallation/Maven_2.23.0/bin/allure']]
                ])
 
 
